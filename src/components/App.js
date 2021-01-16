@@ -11,15 +11,15 @@ function App() {
 
   const handlerUpdateFeedback = type => {
     switch (type) {
-      case 'good':
+      case 'Good':
         setGood(prevValue => prevValue + 1);
         break;
 
-      case 'neutral':
+      case 'Neutral':
         setNeutral(prevValue => prevValue + 1);
         break;
 
-      case 'bad':
+      case 'Bad':
         setBad(prevValue => prevValue + 1);
         break;
 
@@ -53,7 +53,8 @@ function App() {
             totalFeedback={countTotalFeedback}
             positiveFeedbackPercentage={countPositiveFeedbackPercentage()}
           />
-        ) : (
+        ) 
+       : (
           <Notification message="No feedback given" />
         )}
       </Section>
